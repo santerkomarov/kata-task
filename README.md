@@ -1,7 +1,4 @@
-# GildedRose Kata - PHP Version
-
-See the [top level readme](../README.md) for general information about this exercise. This is the PHP version of the
-GildedRose Kata.
+# Решение задачи GildedRose Kata 
 
 ## Installation
 
@@ -17,20 +14,14 @@ Recommended:
 See [GitHub cloning a repository](https://help.github.com/en/articles/cloning-a-repository) for details on how to
 create a local copy of this project on your computer.
 
-```sh
-git clone git@github.com:emilybache/GildedRose-Refactoring-Kata.git
-```
-
-or
-
 ```shell script
-git clone https://github.com/emilybache/GildedRose-Refactoring-Kata.git
+git clone https://github.com/santerkomarov/kata-task.git
 ```
 
 Install all the dependencies using composer
 
 ```shell script
-cd ./GildedRose-Refactoring-Kata/php
+cd ./kata-task/
 composer install
 ```
 
@@ -43,28 +34,27 @@ The project uses composer to install:
 - [PHPStan](https://github.com/phpstan/phpstan)
 - [Easy Coding Standard (ECS)](https://github.com/symplify/easy-coding-standard)
 
-## Folders
+## Папки
 
-- `src` - contains the two classes:
-    - `Item.php` - this class should not be changed
-    - `GildedRose.php` - this class needs to be refactored, and the new feature added
-- `tests` - contains the tests
-    - `GildedRoseTest.php` - starter test.
-        - Tip: ApprovalTests has been included as a dev dependency, see the PHP version of
-          the [Theatrical Players Refactoring Kata](https://github.com/emilybache/Theatrical-Players-Refactoring-Kata/)
-          for an example
+- `src` - 
+    - `Item.php` - этот класс не следует менять
+    - `GildedRose.php` - ОБРАЗЕЦ который будет изменён.
+    - `GildedRoseGold.php` - РЕФАКТОРИНГ `GildedRose.php`.
+    - `cases` - ПАПКА с классами логики для каждого типа товаров.
+- `tests` - тест для проверки работы
+    - `GildedRoseGoldTest.php` - файл теста для всех типов товаров.
 - `Fixture`
-    - `texttest_fixture.php` this could be used by an ApprovalTests, or run from the command line
+    - `texttest_fixture.php` можно запустить из командной строки.
 
 ## Fixture
 
-To run the fixture from the php directory:
+Запуск **fixture** из каталога php:
 
 ```shell
 php .\fixtures\texttest_fixture.php 10
 ```
 
-Change **10** to the required days.
+Измените **10** на необходимые дни.
 
 ## Testing
 
